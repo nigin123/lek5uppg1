@@ -1,0 +1,118 @@
+/* Reset-ish */
+* { box-sizing: border-box; }
+html,body { height: 100%; margin: 0; padding: 0; }
+
+/* Kroppsinställningar: allt på hög och centrerat */
+body {
+display: flex;
+flex-direction: column;
+align-items: center; /* centrera horisontellt */
+gap: 12px; /* mellanrum mellan divarna */
+font-family: Roboto, Arial, Helvetica, sans-serif;
+background: white;
+padding: 20px 0;
+}
+
+/* Alla divar samma bredd och centrerade */
+#top, #mellan, #botten {
+width: 80%;
+margin: 0 auto;
+}
+
+/* ----- TOPP ----- */
+#top{
+border: 3px solid red; /* röd ram runt hela top-dive */
+min-height: 80px;
+display:flex;
+flex-direction: row; /* placerar länkar och rubrik på rad */
+align-items: center; /* centrera vertikalt */
+justify-content: space-between;
+padding: 8px 12px;
+background: transparent;
+}
+
+/* Grupp för länkar (vänster sida) */
+.top-links {
+display:flex;
+gap:18px;
+align-items: center;
+}
+
+/* Länkar i toppen: monospace, 20px */
+.top-links a {
+font-family: monospace;
+font-size: 20px;
+text-decoration: none;
+color: #2244aa;
+}
+
+/* Rubriken i toppen: aqua bakgrund och svart ram */
+#rubrik {
+background-color: aqua; /* aqua-ruta inuti top */
+border: 3px solid black;
+padding: 8px 60px; /* breddökning med padding */
+margin: 0; /* ta bort defaultmarginal */
+text-align: center;
+align-self: center;
+font-size: 20px;
+line-height: 1;
+}
+
+/* Se till att alla h1 centreras generellt (om någonstans behövs) */
+h1 { text-align: center; margin: 0; }
+
+/* ----- MELLAN (orange ram) ----- */
+#mellan{
+border: 3px solid orange; /* orange ram runt hela mellan-dive */
+background: #f4f4f4; /* svagt grått som i bilden */
+display:flex;
+flex-direction: row; /* boxarna ligger i rad */
+gap: 10px;
+padding: 12px;
+align-items: center; /* centrera höjdmässigt */
+}
+
+/* de två inre boxarna (vänster/höger) */
+.box {
+min-width: 49%; /* vardera tar minst 49% */
+display:flex;
+align-items:center;
+justify-content:center;
+border: 4px solid black; /* tjock svart kant kring varje box */
+padding: 18px;
+box-shadow: none;
+}
+
+/* Vänster: gul bakgrund och större text */
+.box.left {
+background: #fff263; /* gul bakgrund */
+font-weight: 700;
+font-size: 24px;
+}
+
+/* Höger: rosa bakgrund */
+.box.right {
+background: #f2c6cc; /* ljus rosa */
+font-weight: 700;
+font-size: 24px;
+}
+
+/* H1 inne i boxarna centreras och får ingen extra marginal */
+.box h1 { margin: 0; }
+
+/* ----- BOTTEN ----- */
+#botten{
+border: 4px solid gold; /* gul/gräns */
+background: #fff; /* vit bakgrund bakom texten */
+padding: 14px;
+min-height: 180px; /* ge rutan lite höjd som i bilden */
+overflow: auto;
+}
+
+/* text i botten */
+#botten p {
+margin: 0;
+font-size: 13px;
+line-height: 1.45;
+color: #333;
+}
